@@ -1,0 +1,194 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+@font-face {
+  font-family: 'Barlow bold';
+  src: url(../fonts/Barlow/Barlow-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Barlow Extrabold';
+  src: url(../fonts/Barlow/Barlow-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: 'Varela';
+  src: url(../fonts/Varela/Varela-Regular.ttf);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  padding: 5rem;
+  background: #f33a3b;
+}
+
+#app {
+  background: #f7ede3;
+  border: 3px solid #1f1d1d;
+  width: 100%;
+}
+.header {
+  @include d-flex(space-around, center);
+
+  .logo {
+    width: 150px;
+    margin-left: 5%;
+  }
+
+  .nav-wrapper {
+    @include d-flex(space-evenly, center);
+    gap: 2rem;
+    margin-right: 15rem;
+    margin-top: 1rem;
+    font-family: 'varela' serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #1f1d1d;
+  }
+  .input {
+    font-family: 'varela';
+    font-size: 15px;
+    margin-left: 10px;
+    border: none;
+    border-bottom: 1px solid #e0d5c9;
+    width: 10rem;
+    background: inherit;
+  }
+
+  .icons,
+  .input__icons {
+    width: 20px;
+  }
+
+  .icons-wrapper {
+    display: flex;
+    gap: 40px;
+  }
+}
+
+.main {
+  @include d-flex(space-between, center);
+  margin-top: 4rem;
+
+  &__title {
+    font-size: 70px;
+    font-family: 'barlow extrabold';
+    color: #f33a3b;
+    margin-left: 11%;
+    text-transform: uppercase;
+  }
+  &__sub-title {
+    position: relative;
+    left: 20.5%;
+    font-size: 70px;
+    font-family: 'barlow extrabold';
+    color: #f33a3b;
+    text-transform: uppercase;
+  }
+  &__paragraph-wrapper {
+    margin-top: 2rem;
+    margin-left: 21%;
+    font-family: 'varela' sans-serif;
+    font-size: 15px;
+    color: #1f1d1d;
+  }
+
+  &__paragraph {
+    word-break: normal;
+    width: 62%;
+  }
+  .button {
+    padding: 0.5rem;
+    width: 7rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    background: inherit;
+    color: #f33a3b;
+    border: 2px solid #f33a3b;
+    font-family: 'barlow extrabold';
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  .card {
+    background: #e0d5c9;
+    width: 40%;
+    height: 15rem;
+    text-align: center;
+    position: relative;
+    top: 8rem;
+    left: -7rem;
+    font-family: 'varela';
+    font-size: 100%;
+    color: #1f1d1d;
+    border-radius: 20px;
+
+    &__paragraph-wrapper {
+      margin-top: 3rem;
+      text-align: left;
+      margin-left: 1.5rem;
+    }
+
+    &__model-name {
+      margin-top: 1rem;
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    left: -7rem;
+    width: 100%;
+
+    border-radius: 3rem;
+  }
+
+  &__secondary__img {
+    width: 200px;
+    border-radius: 2rem;
+  }
+}
+
+.section {
+  .banner-wrapper {
+    @include d-flex(center, center);
+    margin-top: 5rem;
+    gap: 3rem;
+    margin-bottom: 10rem;
+  }
+
+  .banner {
+    width: 40%;
+    margin-left: 1rem;
+    border-radius: 3rem;
+  }
+  .sub-banner {
+    width: 40%;
+    border-radius: 3rem;
+  }
+  .banner__title {
+    position: relative;
+    left: 10%;
+    top: 4rem;
+    font-family: 'barlow extrabold';
+    font-size: 70px;
+    color: #f33a3b;
+    word-break: normal;
+    width: 20%;
+    text-transform: uppercase;
+  }
+}
