@@ -433,9 +433,26 @@ body {
     }
     &__label-img {
       margin-top: 10%;
-      width: 30rem;
-      height: 20rem;
+      width: 60%;
       border-radius: 2rem;
     }
+  }
+}
+
+.footer {
+  @include grid-sys(1, 4);
+  margin-top: 5%;
+  border-top: 2px solid #e0d5c9;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+
+  &__column-wrapper {
+    margin-top: 10%;
+    line-height: 2rem;
+    padding: 1rem;
+    font-family: 'varela';
+    font-size: 15px;
+    color: #1f1d1d;
   }
 }
