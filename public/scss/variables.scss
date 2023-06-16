@@ -13,44 +13,38 @@
   src: url(../fonts/Varela/Varela-Regular.ttf);
 }
 
-:root {
-  /* PADDING */
-  --padding-xxxl: 128px;
-  --padding-xxl: 60px;
-  --padding-xl: 50px;
-  --padding-l: 40px;
-  --padding-m: 30px;
-  --padding-s: 20px;
-  --padding-xs: 10px;
+/* PADDING */
+$padding-xxxl: 128px;
+$padding-xxl: 60px;
+$padding-xl: 50px;
+$padding-l: 40px;
+$padding-m: 30px;
+$padding-s: 20px;
+$padding-xs: 10px;
 
-  /* MARGIN */
-  --margin-xxxxl: 460px;
-  --margin-xxxl: 128px;
-  --margin-xxl: 60px;
-  --margin-xl: 50px;
-  --margin-l: 40px;
-  --margin-m: 30px;
-  --margin-s: 20px;
-  --margin-xs: 10px;
+/* MARGIN */
+$margin-l: 25%;
+$margin-m: 15%;
+$margin-s: 10%;
+$margin-xs: 5%;
 
-  /* FONT_SIZE */
-  --fs-xxl: 70px;
-  --fs-xl: 50px;
-  --fs-l: 30px;
-  --fs-m: 20px;
-  --fs-s: 18px;
-  --fs-xs: 16px;
-  --fs-xxs: 14px;
+/* FONT_SIZE */
+$fs-xxl: 70px;
+$fs-xl: 50px;
+$fs-l: 30px;
+$fs-m: 25px;
+$fs-s: 20px;
+$fs-xs: 15px;
+$fs-xxs: 14px;
 
-  /* FONT_FAMILY */
-  --ff-barlow-bold: 'Barlow bold';
-  --ff-barlow-extrabold: 'Barlow extrabold';
-  --ff-varela: 'Varela';
+/* FONT_FAMILY */
+$ff-barlow-bold: 'Barlow bold';
+$ff-barlow-extrabold: 'Barlow extrabold';
+$ff-varela: 'Varela';
 
-  /* COLORS */
-  --main-color: #f7ede3;
-  --secondary-color: #e0d5c9;
-  --third-color: #f33a3b;
-  --fourth-color: #1f1d1d;
-  --fifth-color: #ffffff;
-}
+/* COLORS */
+$main-color: #f7ede3;
+$secondary-color: #e0d5c9;
+$third-color: #f33a3b;
+$fourth-color: #1f1d1d;
+$fifth-color: #ffffff;

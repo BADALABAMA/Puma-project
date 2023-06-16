@@ -1,20 +1,6 @@
-@import './mixins.scss';
 @import './variables.scss';
 
-@font-face {
-  font-family: 'Barlow bold';
-  src: url(../fonts/Barlow/Barlow-Bold.ttf);
-}
-
-@font-face {
-  font-family: 'Barlow Extrabold';
-  src: url(../fonts/Barlow/Barlow-ExtraBold.ttf);
-}
-
-@font-face {
-  font-family: 'Varela';
-  src: url(../fonts/Varela/Varela-Regular.ttf);
-}
+@import './mixins.scss';
 
 * {
   padding: 0px;
@@ -27,7 +13,15 @@ a {
   color: inherit;
 }
 a:focus {
-  color: #f33a3b;
+  color: $third-color;
+}
+a:hover {
+  padding: 10px;
+  border: 1px solid $third-color;
+  background: $third-color;
+  color: $secondary-color;
+  border-radius: 1rem;
+  transition: padding 100ms ease-out 50ms;
 }
 
 li {
@@ -36,21 +30,20 @@ li {
 
 body {
   padding: 5rem;
-  background: #f33a3b;
+  background: $third-color;
 }
 
 #app {
-  background: #f7ede3;
-  border: 3px solid #1f1d1d;
+  background: $main-color;
+  border: 3px solid$fourth-color;
   width: 100%;
-  height: 100;
 }
 .header {
   @include d-flex(space-around, center);
 
   .logo {
     width: 150px;
-    margin-left: 5%;
+    margin-left: $margin-xs;
   }
 
   .nav-wrapper {
@@ -58,17 +51,17 @@ body {
     gap: 2rem;
     margin-right: 15rem;
     margin-top: 1rem;
-    font-family: 'varela';
-    font-size: 20px;
+    font-family: $ff-varela;
+    font-size: $fs-s;
     text-transform: uppercase;
-    color: #1f1d1d;
+    color: $fourth-color;
   }
   .input {
-    font-family: 'varela';
-    font-size: 15px;
+    font-family: $ff-varela;
+    font-size: $fs-xs;
     margin-left: 10px;
     border: none;
-    border-bottom: 1px solid #e0d5c9;
+    border-bottom: 1px solid $secondary-color;
     width: 70%;
     background: inherit;
   }
@@ -89,26 +82,26 @@ body {
   margin-top: 4rem;
 
   &__title {
-    font-size: 70px;
-    font-family: 'barlow extrabold';
-    color: #f33a3b;
+    font-size: $fs-xxl;
+    font-family: $ff-barlow-extrabold;
+    color: $third-color;
     margin-left: 11%;
     text-transform: uppercase;
   }
   &__sub-title {
     position: relative;
     left: 20.5%;
-    font-size: 70px;
-    font-family: 'barlow extrabold';
-    color: #f33a3b;
+    font-size: $fs-xxl;
+    font-family: $ff-barlow-extrabold;
+    color: $third-color;
     text-transform: uppercase;
   }
   &__paragraph-wrapper {
     margin-top: 2rem;
     margin-left: 21%;
-    font-family: 'varela';
-    font-size: 15px;
-    color: #1f1d1d;
+    font-family: $ff-varela;
+    font-size: $fs-xs;
+    color: $fourth-color;
   }
 
   &__paragraph {
@@ -121,24 +114,33 @@ body {
     margin-top: 2rem;
     margin-bottom: 3rem;
     background: inherit;
-    color: #f33a3b;
-    border: 2px solid #f33a3b;
-    font-family: 'barlow extrabold';
-    font-size: 15px;
+    color: $third-color;
+    border: 2px solid $third-color;
+    font-family: $ff-barlow-extrabold;
+    font-size: $fs-xs;
     text-transform: uppercase;
   }
 
+  .button:hover {
+    border: 2px solid $third-color;
+    background: $third-color;
+    color: $secondary-color;
+
+    transition: padding 2s ease-out 100ms;
+  }
+
   .card {
-    background: #e0d5c9;
+    background: $secondary-color;
     padding: 1%;
     text-align: center;
     position: relative;
     top: 5rem;
     left: -9.5%;
-    font-family: 'varela';
+    font-family: $ff-varela;
     width: 40%;
-    color: #1f1d1d;
+    color: $fourth-color;
     border-radius: 20px;
+    animation: mymove 3s infinite;
 
     &__paragraph-wrapper {
       padding: 1rem;
@@ -189,32 +191,32 @@ body {
     @include d-flex(space-between, center);
     .banner__title {
       position: relative;
-      left: 10%;
+      left: $margin-s;
       top: 4rem;
-      font-family: 'barlow extrabold';
-      font-size: 70px;
-      color: #f33a3b;
+      font-family: $ff-barlow-extrabold;
+      font-size: $fs-xxl;
+      color: $third-color;
       word-break: normal;
       width: 20%;
       text-transform: uppercase;
     }
     .banner__sub-title-wrapper {
       width: 40%;
-      margin-right: 5%;
+      margin-right: $margin-xs;
 
       .banner__sub-title {
-        font-family: 'barlow bold';
+        font-family: $ff-barlow-extrabold;
         font-size: 60px;
-        color: #f33a3b;
+        color: $third-color;
         text-transform: uppercase;
       }
       .banner__paragraph {
         width: 90%;
         text-align: left;
-        font-family: 'varela';
-        font-size: 20px;
+        font-family: $ff-varela;
+        font-size: $fs-s;
         margin-top: 3%;
-        color: #1f1d1d;
+        color: $fourth-color;
       }
     }
   }
@@ -233,7 +235,7 @@ body {
     border-radius: 2rem;
   }
   &__second-img {
-    margin-top: 25%;
+    margin-top: $margin-l;
     width: 20%;
     border-radius: 1rem;
   }
@@ -241,22 +243,22 @@ body {
   &__title-wrapper {
     width: 35%;
     margin-left: 2%;
-    margin-bottom: 10%;
+    margin-bottom: $margin-s;
   }
   &__title,
   &__sub-title {
-    margin-bottom: 5%;
-    font-family: 'barlow bold';
+    margin-bottom: $margin-xs;
+    font-family: $ff-barlow-extrabold;
     text-transform: uppercase;
     font-size: 35px;
-    color: #f33a3b;
+    color: $third-color;
   }
 
   &__paragraph {
-    margin-bottom: 5%;
-    font-family: 'varela';
+    margin-bottom: $margin-xs;
+    font-family: $ff-varela;
     font-size: 16px;
-    color: #1f1d1d;
+    color: $fourth-color;
   }
 }
 
@@ -264,45 +266,45 @@ body {
   @include d-flex(space-between, center);
 
   &__paragraph-wrapper {
-    margin-left: 5%;
-    margin-top: 10%;
+    margin-left: $margin-xs;
+    margin-top: $margin-s;
   }
   &__title-primary {
-    font-size: 50px;
-    font-family: 'barlow extrabold';
-    color: #1f1d1d;
-    margin-left: 5%;
+    font-size: $fs-xl;
+    font-family: $ff-barlow-extrabold;
+    color: $fourth-color;
+    margin-left: $margin-xs;
     text-transform: uppercase;
   }
   &__title-secondary {
-    margin-left: 25%;
-    font-size: 50px;
-    font-family: 'barlow extrabold';
-    color: #1f1d1d;
+    margin-left: $margin-l;
+    font-size: $fs-xl;
+    font-family: $ff-barlow-extrabold;
+    color: $fourth-color;
     text-transform: uppercase;
   }
   &__title-third {
     margin-left: 11%;
-    margin-bottom: 10%;
-    font-size: 50px;
-    font-family: 'barlow extrabold';
-    color: #1f1d1d;
+    margin-bottom: $margin-s;
+    font-size: $fs-xl;
+    font-family: $ff-barlow-extrabold;
+    color: $fourth-color;
     text-transform: uppercase;
   }
   &__paragraph__title {
     margin-left: 11%;
     margin-bottom: 1%;
-    font-family: 'barlow bold';
-    font-size: 30px;
+    font-family: $ff-barlow-extrabold;
+    font-size: $fs-l;
     text-transform: uppercase;
-    color: #f33a3b;
+    color: $third-color;
   }
 
   &__paragraph {
     width: 57%;
     margin-left: 11%;
-    font-family: 'varela';
-    color: #1f1d1d;
+    font-family: $ff-varela;
+    color: $fourth-color;
   }
 
   &__paragraph__primary-img {
@@ -310,20 +312,20 @@ body {
     top: -9rem;
     border-radius: 3rem;
     width: 30%;
-    margin-left: 10%;
+    margin-left: $margin-s;
   }
   &__paragraph__secondary-img {
     width: 40%;
-    margin-top: 15%;
+    margin-top: $margin-m;
     border-radius: 3rem;
-    margin-left: 5%;
+    margin-left: $margin-xs;
   }
 
   &__img {
     width: 70%;
-    margin-left: 10%;
-    margin-top: 5%;
-    margin-bottom: 10%;
+    margin-left: $margin-s;
+    margin-top: $margin-xs;
+    margin-bottom: $margin-s;
     border-radius: 3rem;
   }
 }
@@ -334,8 +336,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 3rem;
-    margin-top: 10%;
-    margin-left: 10%;
+    margin-top: $margin-s;
+    margin-left: $margin-s;
     width: 80%;
     height: 700px;
   }
@@ -344,26 +346,26 @@ body {
     position: relative;
     top: 3rem;
     width: 40%;
-    font-size: 70px;
-    font-family: 'barlow extrabold';
-    color: #f7ede3;
-    margin-left: 5%;
+    font-size: $fs-xxl;
+    font-family: $ff-barlow-extrabold;
+    color: $main-color;
+    margin-left: $margin-xs;
     text-transform: uppercase;
   }
   &__paragraph {
     position: relative;
     top: 20rem;
-    margin-left: 5%;
+    margin-left: $margin-xs;
     width: 30%;
-    font-size: 20px;
+    font-size: $fs-s;
     text-transform: uppercase;
-    font-family: 'barlow bold';
-    color: #f7ede3;
+    font-family: $ff-barlow-extrabold;
+    color: $main-color;
   }
 
   &__sub-wrapper {
     @include d-flex(space-between, start);
-    margin-top: 10%;
+    margin-top: $margin-s;
     margin-left: 12%;
     width: 73%;
   }
@@ -372,19 +374,19 @@ body {
     position: relative;
     top: -3rem;
     left: 5rem;
-    font-size: 25px;
+    font-size: $fs-m;
     text-transform: uppercase;
-    font-family: 'barlow bold';
-    color: #f33a3b;
+    font-family: $ff-barlow-extrabold;
+    color: $third-color;
   }
   &__sub-paragraph {
-    font-family: 'varela';
-    font-size: 15px;
-    color: #1f1d1d;
+    font-family: $ff-varela;
+    font-size: $fs-xs;
+    color: $fourth-color;
   }
   .section__paragraph {
     @include d-flex(center, center);
-    margin-top: 10%;
+    margin-top: $margin-s;
     gap: 10rem;
     &__wrapper {
       width: 50%;
@@ -393,17 +395,17 @@ body {
     &__img {
       width: 30%;
       border-radius: 3rem;
-      margin-left: 10%;
+      margin-left: $margin-s;
     }
 
     &__title-primary,
     &__title-secondary,
     &__title-third {
-      font-size: 50px;
+      font-size: $fs-xl;
       text-transform: uppercase;
-      font-family: 'barlow extrabold';
-      color: #1f1d1d;
-      margin-right: 15%;
+      font-family: $ff-barlow-extrabold;
+      color: $fourth-color;
+      margin-right: $margin-xs;
     }
 
     &__title-secondary {
@@ -414,25 +416,25 @@ body {
     }
 
     &__label-wrapper {
-      margin-left: 10%;
+      margin-left: $margin-s;
     }
     &__label__title {
       text-align: start;
-      margin-top: 10%;
-      font-size: 30px;
-      font-family: 'barlow bold';
+      margin-top: $margin-s;
+      font-size: $fs-m;
+      font-family: $ff-barlow-extrabold;
       text-transform: uppercase;
-      color: #f33a3b;
+      color: $third-color;
     }
     &__label {
       text-align: start;
       margin-top: 2%;
       width: 60%;
-      font-family: 'varela';
-      font-size: 15px;
+      font-family: $ff-varela;
+      font-size: $fs-xs;
     }
     &__label-img {
-      margin-top: 10%;
+      margin-top: $margin-s;
       width: 60%;
       border-radius: 2rem;
     }
@@ -441,18 +443,33 @@ body {
 
 .footer {
   @include grid-sys(1, 4);
-  margin-top: 5%;
-  border-top: 2px solid #e0d5c9;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 5%;
+  margin-top: $margin-xs;
+  border-top: 2px solid $secondary-color;
+  margin-left: $margin-xs;
+  margin-right: $margin-xs;
+  margin-bottom: $margin-xs;
 
   &__column-wrapper {
-    margin-top: 10%;
+    margin-top: $margin-s;
     line-height: 2rem;
     padding: 1rem;
-    font-family: 'varela';
-    font-size: 15px;
-    color: #1f1d1d;
+    font-family: $ff-varela;
+    font-size: $fs-xs;
+    color: $fourth-color;
+  }
+}
+
+@keyframes mymove {
+  0% {
+    top: 50px;
+  }
+  25% {
+    top: 150px;
+  }
+  75% {
+    top: 100px;
+  }
+  100% {
+    top: 50px;
   }
 }
