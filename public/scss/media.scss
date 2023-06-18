@@ -94,17 +94,17 @@
     .banner__title-wrapper {
       .banner__title {
         position: relative;
-        left: $margin-s;
+        left: 10%;
         top: 4rem;
-        font-size: $fs-xl;
+        font-size: 45px;
         width: 20%;
       }
       .banner__sub-title-wrapper {
         .banner__sub-title {
-          font-size: $fs-xl;
+          font-size: 35px;
         }
         .banner__paragraph {
-          width: 90%;
+          width: 100%;
           text-align: left;
           font-family: $ff-varela;
           font-size: $fs-xs;
